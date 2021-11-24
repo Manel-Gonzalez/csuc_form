@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form id="form">
+            <div class="title">Validation Form Test</div>
+            <br>
+            <div>
+                <label for="firstName">Nom</label>
+                <input type="text" name="firstname" id="firstname" placeholder="Nom"/>
+                <div class="error"></div>
+            </div>
+
+            <div>
+                <label for="lastName">Cognom</label>
+                <input type="text" name="lastname" id="lastname" placeholder="Cognom"/>
+                <div class="error"></div>
+            </div>
+
+            <div>
+                <label for="identification">Identificació</label>
+                <input type="text" name="identification" id="identification" placeholder="Identificació"/>
+                <div class="error"></div>
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="Email"/>
+                <div class="error"></div>
+            </div>
+
+            <div>
+                <label for="phone">Telefón </label>
+                <input type="text" name="phone" id="phone" placeholder="Telefón"/>
+                <div class="error"></div>
+            </div>
+            
+        <button type="submit" id="submit">Guardar</button>
+        </form>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
