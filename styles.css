@@ -6,6 +6,7 @@
 
 body{
     font-family: sans-serif;
+    background-image: url("./images/background.svg");
 }
 
 form{
@@ -45,8 +46,8 @@ form div input {
 }
 
 input:focus{
-    border: 2px solid;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -60,7 +61,7 @@ button{
     border-radius: 8px;
     border: 2px solid rgb(255, 69, 0);
     background-color: rgb(255, 99, 71);   
-    box-shadow: 2px 2px 4px rgba(255, 68, 0, 0.3);
+    box-shadow: 2px 2px 4px rgba(255, 68, 0, 0.5);
     color: white;
 
     cursor: pointer;

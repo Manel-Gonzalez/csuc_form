@@ -17,16 +17,18 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
 
 
-    regex(firstname, 0, " *El nom no pot estar buit");
-    regex(lastname, 1, " *El cognom no pot estar buit");
-    regex(identification, 2, " *El DNI no pot estar buit");
-    regex(email, 3, " *El email no pot estar buit");
-    regex(phone, 4, " *El telefon no pot estar buit");
+    regex(firstname, 0, /^[A-Za-zÀ-ÿ]{2,30}$/, " *El nom ha de contenir entre 2 i 30 lletres.");
+    regex(lastname, 1, /^[A-Za-zÀ-ÿ\s]{2,30}$/," *Els cognoms han de contenir entre 2 i 30 lletres.");
+    regex(identification, 2, /^[0-9]{8}[A-Z]{1}$/, " *El DNI ha de ser del tipus 00000000X.");
+    regex(email, 3, /^[A-Za-z0-9+_.-]+@(.+)$/, " *No és un email vàlid.");
+    regex(phone, 4, /^[0-9+]{9,13}$/, " *El telèfon ha de ser numèric.");
+    
 });
 
-let regex = (id, serial, message) => {
+let regex = (id, serial, rgx, message ) => {
 
-    if (id.value === ""){
+    if (!rgx.test(id.value)){
+
         errorMsg[serial].innerHTML = message;
         id.style.border = "2px solid red";
     }else{
